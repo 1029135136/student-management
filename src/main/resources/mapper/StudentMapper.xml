@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ang.student.model.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.ang.student.model.domain.Student">
+    <!--@mbg.generated-->
+    <!--@Table student-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="card_id" jdbcType="BIGINT" property="cardId" />
+    <result column="class_room_id" jdbcType="BIGINT" property="classRoomId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, card_id, class_room_id
+  </sql>
+</mapper>
