@@ -1,18 +1,19 @@
 package com.ang.student.conf;
 
 import com.baomidou.mybatisplus.annotation.DbType;
-import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author: 于昂
  * @date: 2022/8/15
  **/
 @Configuration
+@EnableTransactionManagement
 @MapperScan("com.ang.student.model.mapper")
 public class MybatisPlusConfig {
 
