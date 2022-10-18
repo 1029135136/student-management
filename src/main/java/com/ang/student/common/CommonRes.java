@@ -32,11 +32,21 @@ public class CommonRes<T> {
     }
 
     public static CommonRes fail(String errorMessage) {
-        return new CommonRes(ResCode.SYSTEM_ERROR, null, errorMessage);
+        return new CommonRes(ResCode.FAILED, null, errorMessage);
     }
 
     public static CommonRes fail() {
         return fail("系统内部错误");
     }
 
+    public static CommonRes forbidden(String message) {
+        return new CommonRes(ResCode.FAILED, message);
+    }
+
+    /**
+     * 未登录返回结果
+     */
+    public static  CommonRes unauthorized(String errorMessage) {
+        return new CommonRes(ResCode.UNAUTHORIZED, null, errorMessage);
+    }
 }

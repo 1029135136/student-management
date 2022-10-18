@@ -25,9 +25,9 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @RequestMapping(value = "pageList", method = RequestMethod.GET)
-    public CommonRes<Page<Student>> pageList(@RequestParam("pageSize") Long pageSize, @RequestParam("pageNum") Long pageNum) {
-        return CommonRes.success(studentService.page(new Page<>(pageNum, pageSize)));
+    @RequestMapping(value = "page", method = RequestMethod.GET)
+    public CommonRes<Page<Student>> pageList(@RequestParam("page") Long page, @RequestParam("size") Long size) {
+        return CommonRes.success(studentService.page(new Page<>(page, size)));
     }
 
     @RequestMapping(value = "list", method = RequestMethod.GET)

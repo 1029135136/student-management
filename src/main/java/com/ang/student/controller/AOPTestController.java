@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/test")
-public class TestController {
+public class AOPTestController {
     private final TestService testService;
 
     @Autowired
-    public TestController(TestService testService) {
+    public AOPTestController(TestService testService) {
         this.testService = testService;
     }
 

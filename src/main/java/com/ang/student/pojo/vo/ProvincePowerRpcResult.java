@@ -1,4 +1,4 @@
-package com.ang.student.vo;
+package com.ang.student.pojo.vo;
 
 import lombok.Data;
 

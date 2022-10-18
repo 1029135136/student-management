@@ -6,6 +6,9 @@ import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ang.student.model.domain.Student;
 import com.ang.student.model.mapper.StudentMapper;
+/**
+ * @author 10291
+ */
 @Service
 public class StudentService extends ServiceImpl<StudentMapper, Student> {
 

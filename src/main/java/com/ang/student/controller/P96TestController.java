@@ -1,8 +1,7 @@
 package com.ang.student.controller;
 
-import cn.hutool.core.date.DateUtil;
-import com.ang.student.vo.P96ReqVO;
-import com.ang.student.vo.ProvincePowerRpcResult;
+import com.ang.student.pojo.vo.P96ReqVO;
+import com.ang.student.pojo.vo.ProvincePowerRpcResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

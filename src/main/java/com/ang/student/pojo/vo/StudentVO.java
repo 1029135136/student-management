@@ -1,6 +1,5 @@
-package com.ang.student.vo;
+package com.ang.student.pojo.vo;
 
-import com.baomidou.mybatisplus.core.conditions.update.Update;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
