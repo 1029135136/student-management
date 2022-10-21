@@ -3,7 +3,7 @@ package com.ang.student.controller;
 import com.ang.student.common.CommonRes;
 import com.ang.student.model.domain.Student;
 import com.ang.student.model.service.StudentService;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.ang.student.pojo.vo.student.StudentResVO;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +27,9 @@ public class StudentController {
     }
 
     @RequestMapping(value = "page", method = RequestMethod.GET)
-    public CommonRes<Page<Student>> pageList(@RequestParam("page") Long page, @RequestParam("size") Long size) {
-        return CommonRes.success(studentService.page(new Page<>(page, size), Wrappers.<Student>lambdaQuery()
-                                                                                     .orderByDesc(Student::getId)));
+    public CommonRes<Page<StudentResVO>> pageList(@RequestParam("page") Long page, @RequestParam("size") Long size) {
+        Page<StudentResVO> result = studentService.pageWithClassRom(new Page<>(page, size));
+        return CommonRes.success(result);
     }
 
     @RequestMapping(value = "list", method = RequestMethod.GET)

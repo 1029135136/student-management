@@ -5,7 +5,6 @@ import com.ang.student.model.service.UserService;
 import com.ang.student.pojo.vo.login.LoginReqVO;
 import com.ang.student.service.AuthenticationUserService;
 import com.ang.student.utils.JwtTokenUtil;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

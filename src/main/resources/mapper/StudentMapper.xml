@@ -17,9 +17,13 @@
         class_room_id
     </sql>
 
-    <select id="selectXXX" resultMap="BaseResultMap" parameterType="java.lang.String">
-        select *
-        from student
-        where id = 2
+    <select id="selectPageWithClassRom" resultType="com.ang.student.pojo.vo.student.StudentResVO">
+        select s.id            id,
+               s.`name`        `name`,
+               s.card_id       cardId,
+               s.class_room_id classRoomId,
+               cr.name         classRoomName
+        from student s
+                 left join class_room cr on s.class_room_id = cr.id
     </select>
 </mapper>

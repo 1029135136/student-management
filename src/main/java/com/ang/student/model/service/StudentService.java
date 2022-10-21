@@ -1,15 +1,11 @@
 package com.ang.student.model.service;
 
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
-import java.util.List;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ang.student.model.domain.Student;
-import com.ang.student.model.mapper.StudentMapper;
-/**
- * @author 10291
- */
-@Service
-public class StudentService extends ServiceImpl<StudentMapper, Student> {
+import com.ang.student.pojo.vo.student.StudentResVO;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
+public interface StudentService extends IService<Student>{
 
+
+    Page<StudentResVO> pageWithClassRom(Page<StudentResVO> objectPage);
 }
